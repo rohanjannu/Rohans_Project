@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-tenplate <class T>
+//template <class T>
 class Potter
 {
     int x,y,z;
@@ -30,8 +30,8 @@ class smrt_ptr
     smrt_ptr(Potter *p=NULL){ptr=p;}
     ~smrt_ptr(){delete ptr;}
 
-    Potter &operator*(){return *ptr;}
-    Potter *operator->(){return ptr;}
+    Potter& operator*(){return *ptr;}
+    Potter* operator->(){return ptr;}
 };
 
 int main()

@@ -5,11 +5,12 @@ typedef struct rohan
 {
     int a;
     string b;
-}p;
+}r;
 
 int main()
 {
-    r w={.b="Harry"};  //might not work in cpp for designated initialisers
-    cout<<r.a,r.b;
+    r w; // Use default initialization
+    w.b = "Harry";
+    cout<<w.a<<w.b;
     return 0;
 }

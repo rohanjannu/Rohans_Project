@@ -6,8 +6,8 @@ class smrt_ptr
 {
     int *ptr;
     public:
-    smrt_ptr(int *p = null){ptr=p;}
-    ~smrt_ptr(){delete p;}
+    smrt_ptr(int *p = NULL){ptr=p;}
+    ~smrt_ptr(){delete ptr;}
 
     int &operator*() {return *ptr;}
 };

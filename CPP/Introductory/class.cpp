@@ -2,7 +2,7 @@
 struct rohan
 {
     int a;
-    int b;=======
+    int b;
 };
 
 int main()
