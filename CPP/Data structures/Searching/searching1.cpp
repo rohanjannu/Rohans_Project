@@ -1,23 +1,27 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-
-int binsearch(int arr[],int low,int high,int x)
+int binary_search(int arr[],int n,int x)
 {
+    int low=0,high=n-1;
+    while(low<=high)
+    {
     int mid=(low+high)/2;
-    if (low>high) return -1;
     if(arr[mid]==x)
-    return mid;
-    else if(arr[mid]<x)
-    return binsearch(arr,mid+1,high,x);
+        return 1;
+    else if(arr[mid]>x)
+        high=mid-1;
     else
-    return binsearch(arr,low,mid-1,x);
+    low = mid+1;
+    }
+    return 0;
 }
 
 int main()
 {
-    int arr[] = {10,20,30,40,50,60};
-    int low=0,high=6,x=50;
-    cout<<binsearch(arr,low,high,x);
+    int arr[]{10,20,30,40,50,60,70,80,90,100};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int x=20;
+    cout<<binary_search(arr,n,x);
     return 0;
 }

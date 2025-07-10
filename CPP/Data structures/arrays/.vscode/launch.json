@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/41369/OneDrive - Tata Elxsi/C++/Data structures/arrays",
-      "program": "c:/Users/41369/OneDrive - Tata Elxsi/C++/Data structures/arrays/build/Debug/outDebug",
+      "cwd": "c:/Users/ur32vj/Documents/Learning/CPP/Data Structures/Arrays",
+      "program": "c:/Users/ur32vj/Documents/Learning/CPP/Data Structures/Arrays/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

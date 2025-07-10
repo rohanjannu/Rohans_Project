@@ -1,53 +1,46 @@
-#include<bits\stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-
-struct myhash
+struct MyHash
 {
-    int bucket;
+    int BUCKET;
     list <int> *table;
-
-    myhash(int b)
+    MyHash(int b)
     {
-        bucket=b;
-        table= new list<int>[bucket];
+        BUCKET =b;
+        table = new list<int>[BUCKET];
     }
-
     void insert(int a)
     {
-        int i=a%bucket;
+        int i = a%BUCKET;
         table[i].push_back(a);
-    }
-    bool search(int a)
-    {
-        int i = a%bucket;
-        for(auto x:table[i])
-        {
-            if(x==a)
-            {
-                return true;
-            }
-        }
-        return false;
     }
     void remove(int a)
     {
-        int i=a%bucket;
+        int i = a%BUCKET;
         table[i].remove(a);
     }
+    bool search(int a)
+    {
+        int i = a%BUCKET;
+        for(auto x:table[i])
+        if(x==a)
+        return true;
+        return false;
+    }
+
 };
 
 int main()
 {
-    myhash mh(7);
-    mh.insert(40);
-    mh.insert(56);
-    mh.insert(67);
-    mh.insert(20);
-    mh.insert(12);
-    cout<<mh.search(10)<<endl;
-    cout<<mh.search(20)<<endl;
-    mh.remove(20);
-    cout<<mh.search(20)<<endl;
+    int b = 7;
+    MyHash mh(10);
+    mh.insert(5);
+    mh.insert(6);
+    mh.insert(10);
+    mh.insert(500);
+    cout<<mh.search(10);
+    mh.remove(10);
+    cout<<mh.search(10);
     return 0;
 }
