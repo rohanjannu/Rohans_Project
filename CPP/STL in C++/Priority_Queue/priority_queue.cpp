@@ -81,9 +81,9 @@ void printkfrequent1(int arr[],int n,int k)
 int main()
 {
     //priority_queue<int> pq;  //this is max heap by default
-    priority_queue<int,vector<int>,greater<int>> pq;  //this is min heap 
+    priority_queue<int,vector<int>,greater<int>> pq;  //this is min heap //asceding order
     int arr[]{1,2,3,4,5,10,7,9,8,6};
-    priority_queue<int> pq1(arr,arr+10);
+    priority_queue<int> pq1(arr,arr+10); //this is better than individually calling the push function
     pq.push(10);
     pq.push(15);
     pq.push(5);

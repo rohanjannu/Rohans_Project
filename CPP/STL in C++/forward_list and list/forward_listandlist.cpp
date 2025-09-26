@@ -7,7 +7,7 @@ int main()
 {
     forward_list<int> l;
     l.assign({10,20,30,40});
-    l.remove(40);
+    l.remove(40); //removes all 40 in the list
     forward_list<int> l2;
     for(auto it = l.begin();it!=l.end();it++)
     {
